@@ -2,10 +2,41 @@ package com.gezioteam.gezio
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.Fragment
+import com.gezioteam.gezio.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding : ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        replaceFragment(home())
+
+        binding.bottomNavigationView.setOnItemSelectedListener {
+
+            when(it.itemId){
+
+                R.id.home -> replaceFragment(home())
+                //R.id.search_button -> replaceFragment(s())
+                R.id.location -> replaceFragment(location())
+                R.id.calendar -> replaceFragment(schedule())
+                //R.id.favorite -> replaceFragment(Settings())
+                else ->{
+                }
+            }
+            true
+        }
+    }
+    private fun replaceFragment(fragment : Fragment){
+
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.frame_layout,fragment)
+        fragmentTransaction.commit()
+
+
     }
 }

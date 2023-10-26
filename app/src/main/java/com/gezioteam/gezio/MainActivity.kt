@@ -1,42 +1,75 @@
-package com.gezioteam.gezio
+package com.gezioteam.gezio;
 
-import androidx.appcompat.app.AppCompatActivity
+
 import android.os.Bundle
+import android.view.MenuItem
+import android.widget.Toast
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import com.gezioteam.gezio.databinding.ActivityMainBinding
+import com.google.android.material.navigation.NavigationView
 
-class MainActivity : AppCompatActivity() {
-
-    private lateinit var binding : ActivityMainBinding
-
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+    private lateinit var fragmentManager: FragmentManager
+    private lateinit var binding:ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding=ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        replaceFragment(home())
 
-        binding.bottomNavigationView.setOnItemSelectedListener {
+        setSupportActionBar(binding.toolbar)
+        val toggle = ActionBarDrawerToggle(this,binding.drawerLayout,binding.toolbar,R.string.nav_open,R.string.nav_close)
+        binding.drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
 
-            when(it.itemId){
-
-                R.id.home -> replaceFragment(home())
-                //R.id.search_button -> replaceFragment(s())
-                R.id.location -> replaceFragment(location())
-                R.id.calendar -> replaceFragment(schedule())
-                //R.id.favorite -> replaceFragment(Settings())
-                else ->{
-                }
+        binding.navigationDrawer.setNavigationItemSelectedListener ( this)
+        binding.bottomNavigation.background=null
+        binding.bottomNavigation.setOnItemSelectedListener { item ->
+            when(item.itemId){
+                R.id.bottom_home -> openFragment(HomeFragment())
+                R.id.bottom_schedule -> openFragment(ScheduleFragment())
+                R.id.bottom_favorite -> openFragment(FavoriteFragment())
             }
             true
         }
-    }
-    private fun replaceFragment(fragment : Fragment){
 
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.frame_layout,fragment)
+        fragmentManager=supportFragmentManager
+        openFragment(HomeFragment())
+
+        binding.fab.setOnClickListener{
+            Toast.makeText(this,"Categories",Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.nav_home ->openFragment(HomeFragment())
+            R.id.nav_location ->openFragment(LocationFragment())
+            R.id.nav_schedule ->openFragment(ScheduleFragment())
+            R.id.nav_favorite ->openFragment(FavoriteFragment())
+
+        }
+        binding.drawerLayout.closeDrawer(GravityCompat.START)
+        return true
+    }
+
+    override fun onBackPressed() {
+        if(binding.drawerLayout.isDrawerOpen(GravityCompat.START)){
+            binding.drawerLayout.closeDrawer(GravityCompat.START)
+        }else{
+            super.getOnBackPressedDispatcher().onBackPressed()
+        }
+    }
+
+    private fun openFragment(fragment: Fragment){
+        val fragmentTransaction: FragmentTransaction=fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.fragment_container,fragment)
         fragmentTransaction.commit()
 
-
     }
+
 }

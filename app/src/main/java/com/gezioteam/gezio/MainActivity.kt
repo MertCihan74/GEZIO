@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 R.id.bottom_home -> openFragment(HomeFragment())
                 R.id.bottom_schedule -> openFragment(ScheduleFragment())
                 R.id.bottom_favorite -> openFragment(FavoriteFragment())
+
             }
             true
         }
@@ -41,7 +42,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         openFragment(HomeFragment())
 
         binding.fab.setOnClickListener{
-            Toast.makeText(this,"Categories",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"Select Location",Toast.LENGTH_SHORT).show()
+            openFragment(LocationFragment())
         }
     }
 

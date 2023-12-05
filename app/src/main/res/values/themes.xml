@@ -7,4 +7,8 @@
     </style>
 
     <style name="Theme.GEZIO" parent="Base.Theme.GEZIO" />
+    <style name="roundedImageViewRounded">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
 </resources>

@@ -15,8 +15,18 @@ class ScheduleFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-
         return inflater.inflate(R.layout.fragment_schedule, container, false)
+
+        var artistNames = ArrayList<String>()
+        artistNames.add("Gripin")
+        artistNames.add("Teoman")
+        artistNames.add("Mor Ve Ötesi")
+        artistNames.add("Metallica")
+        artistNames.add("Sena Şener")
+        artistNames.add("Sezen Aksu")
+        artistNames.add("Yakışıklı Güvenlik")
+
+
     }
 
 

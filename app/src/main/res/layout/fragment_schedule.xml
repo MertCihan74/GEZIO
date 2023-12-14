@@ -184,8 +184,8 @@
 
                 <TextView
                     android:id="@+id/placeteoman"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:paddingLeft="26dp"
                     android:text="İstanbul / Harbiye"
                     android:textColor="@color/acıkgri"
@@ -252,8 +252,8 @@
 
                 <TextView
                     android:id="@+id/titlemvo"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:paddingLeft="30dp"
                     android:text="Mor ve Ötesi"
                     android:textColor="@color/white"
@@ -339,8 +339,8 @@
 
                 <TextView
                     android:id="@+id/titlemetallica"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:paddingLeft="30dp"
                     android:text="Metallica"
                     android:textColor="@color/white"
@@ -426,8 +426,8 @@
 
                 <TextView
                     android:id="@+id/senasenertitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:paddingLeft="30dp"
                     android:text="Sena Şener"
                     android:textColor="@color/white"
@@ -532,8 +532,8 @@
 
                 <TextView
                     android:id="@+id/sezenaksutitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:paddingLeft="30dp"
                     android:text="Sezen Aksu"
                     android:textColor="@color/white"
@@ -618,8 +618,8 @@
 
                 <TextView
                     android:id="@+id/yakisiklititle"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:paddingLeft="30dp"
                     android:text="Yakışıklı Güvenlik"
                     android:textColor="@color/white"

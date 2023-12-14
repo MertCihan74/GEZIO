@@ -1,8 +1,10 @@
 package com.gezioteam.gezio;
 
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
@@ -21,6 +23,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         binding=ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
+
+        val profilebutton = findViewById<ImageButton>(R.id.toolbar_profile)
+        profilebutton.setOnClickListener{
+            openProfileActivity()
+        }
+
         setSupportActionBar(binding.toolbar)
         val toggle = ActionBarDrawerToggle(this,binding.drawerLayout,binding.toolbar,R.string.nav_open,R.string.nav_close)
         binding.drawerLayout.addDrawerListener(toggle)
@@ -33,7 +42,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 R.id.bottom_home -> openFragment(HomeFragment())
                 R.id.bottom_schedule -> openFragment(ScheduleFragment())
                 R.id.bottom_favorite -> openFragment(FavoriteFragment())
-
+                R.id.bottom_search -> openFragment(SearchFragment())
             }
             true
         }
@@ -53,7 +62,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_location ->openFragment(LocationFragment())
             R.id.nav_schedule ->openFragment(ScheduleFragment())
             R.id.nav_favorite ->openFragment(FavoriteFragment())
-
+            R.id.nav_search -> openFragment(SearchFragment())
         }
         binding.drawerLayout.closeDrawer(GravityCompat.START)
         return true
@@ -72,6 +81,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         fragmentTransaction.replace(R.id.fragment_container,fragment)
         fragmentTransaction.commit()
 
+    }
+    fun openProfileActivity() {
+        val intent = Intent(this, ProfileActivity::class.java)
+        startActivity(intent)
     }
 
 }

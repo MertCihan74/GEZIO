@@ -86,7 +86,7 @@
                         android:layout_marginEnd="32dp"
                         android:layout_marginBottom="10dp"
                         android:background="@drawable/btn_background_1"
-                        android:drawableStart="@drawable/ic_1"
+                        android:drawableStart="@drawable/ic_2"
                         android:drawablePadding="20dp"
                         android:paddingStart="20dp"
                         android:text="My Reviews"
@@ -94,23 +94,7 @@
                         android:textStyle="bold"
                         style="@android:style/Widget.Button"
                         android:textAlignment="viewStart" />
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/button2"
-                        android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:layout_marginStart="32dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="32dp"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        style="@android:style/Widget.Button"
-                        android:layout_marginBottom="10dp"
-                        android:background="@drawable/btn_background_1"
-                        android:drawableStart="@drawable/ic_2"
-                        android:drawablePadding="20dp"
-                        android:paddingStart="20dp"
-                        android:text="Account Settings"
-                        android:textAlignment="viewStart" />
+
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/button3"
                         android:layout_width="match_parent"
@@ -143,7 +127,24 @@
                         android:drawableStart="@drawable/ic_4"
                         android:drawablePadding="20dp"
                         android:paddingStart="20dp"
-                        android:text="Notification"
+                        android:text="Notifications"
+                        android:textAlignment="viewStart" />
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/button2"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="32dp"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        style="@android:style/Widget.Button"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/btn_background_1"
+                        android:drawableStart="@drawable/ic_1"
+                        android:drawablePadding="20dp"
+                        android:paddingStart="20dp"
+                        android:text="Account Settings"
                         android:textAlignment="viewStart" />
 
                     <androidx.appcompat.widget.AppCompatButton
@@ -160,6 +161,7 @@
                         android:textColor="#ffffff"
                         android:textStyle="bold"
                         android:textSize="18sp"/>
+
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>

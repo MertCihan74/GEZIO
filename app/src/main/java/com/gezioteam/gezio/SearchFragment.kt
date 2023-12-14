@@ -7,9 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.LinearLayoutManager
 import java.util.*
 import android.widget.Toast
+import androidx.recyclerview.widget.GridLayoutManager
 
 
 class SearchFragment : Fragment() {
@@ -27,7 +27,7 @@ class SearchFragment : Fragment() {
         searchView = view.findViewById(R.id.searchView)
 
         recyclerView.setHasFixedSize(true)
-        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        recyclerView.layoutManager = GridLayoutManager(requireContext(),2)
         addDataToList()
         adapter = SearchAdapter(mList)
         recyclerView.adapter = adapter
@@ -65,12 +65,12 @@ class SearchFragment : Fragment() {
     }
 
     private fun addDataToList() {
-        mList.add(SearchData("Ankara", R.drawable.gripin2))
-        mList.add(SearchData("İstanbul", R.drawable.teoman2))
-        mList.add(SearchData("İzmir", R.drawable.morveotesi))
-        mList.add(SearchData("Eskişehir", R.drawable.metallica2))
-        mList.add(SearchData("Antalya", R.drawable.sena2))
-        mList.add(SearchData("Muğla", R.drawable.yakisikli))
+        mList.add(SearchData("Ankara", R.drawable.ankara_srch))
+        mList.add(SearchData("İstanbul", R.drawable.istanbul_srch))
+        mList.add(SearchData("İzmir", R.drawable.izmir_srch))
+        mList.add(SearchData("Eskişehir", R.drawable.eskisehir_srch))
+        mList.add(SearchData("Antalya", R.drawable.antalya_srch))
+        mList.add(SearchData("Muğla", R.drawable.mugla_srch))
 
     }
 

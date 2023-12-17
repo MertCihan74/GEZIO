@@ -30,8 +30,7 @@
                 android:id="@+id/geziologo"
                 android:layout_width="260dp"
                 android:layout_height="152dp"
-                android:layout_marginLeft="72dp"
-                android:layout_marginRight="16dp"
+                android:layout_gravity="center"
                 app:srcCompat="@drawable/gezio_name" />
 
             <EditText

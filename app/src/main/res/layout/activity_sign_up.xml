@@ -30,8 +30,7 @@
                 android:id="@+id/gezio"
                 android:layout_width="260dp"
                 android:layout_height="76dp"
-                android:layout_marginLeft="72dp"
-                android:layout_marginRight="16dp"
+                android:layout_gravity="center"
                 app:srcCompat="@drawable/gezio_name" />
 
             <EditText
@@ -128,6 +127,7 @@
                 android:id="@+id/terms"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
                 android:layout_marginRight="32dp"
                 android:text="I aggre to the Terms of Service"
                 android:textAlignment="textStart" />

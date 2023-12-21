@@ -2,7 +2,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cardView"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
     android:foreground="?android:attr/selectableItemBackground"
@@ -11,18 +11,17 @@
     app:cardCornerRadius="20dp">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
         <ImageView
             android:id="@+id/logoIv"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
             android:scaleType="fitXY"
-            android:padding="0dp"
             app:srcCompat="@drawable/gripin2" />
 
         <TextView
@@ -32,7 +31,7 @@
             android:text="TextView"
             android:layout_gravity="center"
             android:gravity="center"
-            android:textSize="28dp"
+            android:textSize="22sp"
             android:textColor="@color/white"
             android:shadowColor="@color/black"
             android:shadowDx="0"

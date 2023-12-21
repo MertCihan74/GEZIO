@@ -1,6 +1,7 @@
 package com.gezioteam.gezio;
 
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
@@ -30,6 +31,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             openProfileActivity()
         }
 
+
         setSupportActionBar(binding.toolbar)
         val toggle = ActionBarDrawerToggle(this,binding.drawerLayout,binding.toolbar,R.string.nav_open,R.string.nav_close)
         binding.drawerLayout.addDrawerListener(toggle)
@@ -52,17 +54,18 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         binding.fab.setOnClickListener{
             Toast.makeText(this,"Select Location",Toast.LENGTH_SHORT).show()
-            openFragment(LocationFragment())
+            openLocationActivity()
         }
+
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
             R.id.nav_home ->openFragment(HomeFragment())
-            R.id.nav_location ->openFragment(LocationFragment())
             R.id.nav_schedule ->openFragment(ScheduleFragment())
             R.id.nav_favorite ->openFragment(FavoriteFragment())
             R.id.nav_search -> openFragment(SearchFragment())
+            R.id.nav_location -> openLocationActivity()
         }
         binding.drawerLayout.closeDrawer(GravityCompat.START)
         return true
@@ -82,8 +85,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         fragmentTransaction.commit()
 
     }
+
     fun openProfileActivity() {
         val intent = Intent(this, ProfileActivity::class.java)
+        startActivity(intent)
+    }
+    fun openLocationActivity() {
+        val intent = Intent(this, LocationActivity::class.java)
         startActivity(intent)
     }
 

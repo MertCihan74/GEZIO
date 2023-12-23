@@ -65,13 +65,19 @@ class SearchFragment : Fragment() {
     }
 
     private fun addDataToList() {
-        mList.add(SearchData("Ankara", R.drawable.ankara_srch))
-        mList.add(SearchData("İstanbul", R.drawable.istanbul_srch))
-        mList.add(SearchData("İzmir", R.drawable.izmir_srch))
-        mList.add(SearchData("Eskişehir", R.drawable.eskisehir_srch))
-        mList.add(SearchData("Antalya", R.drawable.antalya_srch))
-        mList.add(SearchData("Muğla", R.drawable.mugla_srch))
-
+        mList.add(SearchData("Teoman", R.drawable.teoman2))
+        mList.add(SearchData("Gripin", R.drawable.gripin2))
+        mList.add(SearchData("Metallica", R.drawable.metallica2))
+        mList.add(SearchData("Sezen Aksu", R.drawable.sezenaksu))
+        mList.add(SearchData("Yakışıklı Güvenlik", R.drawable.yakisikli))
+        mList.add(SearchData("Mor ve Ötesi", R.drawable.morveotesi))
+        mList.add(SearchData("Sena Şener", R.drawable.sena2))
+        mList.add(SearchData("Athena", R.drawable.athena))
+        mList.add(SearchData("Tarkan", R.drawable.tarkan))
+        mList.add(SearchData("Emre Aydın", R.drawable.emre))
+        mList.add(SearchData("The Weekend", R.drawable.weekend))
+        mList.add(SearchData("Lana Del Rey", R.drawable.lana))
+        mList.add(SearchData("Şebnem Ferah", R.drawable.sebnem))
     }
 
 }

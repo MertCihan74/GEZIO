@@ -28,7 +28,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardView"
                     android:layout_width="320dp"
-                    android:layout_height="200dp"
+                    android:layout_height="170dp"
                     app:cardCornerRadius="16dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -69,7 +69,7 @@
                         android:layout_marginEnd="8dp"
                         android:layout_weight="0.333"
                         android:clickable="true"
-                        app:cardBackgroundColor="#D9D9D9"
+                        app:cardBackgroundColor="#FFBE58"
                         app:cardCornerRadius="16dp"
                         tools:ignore="TouchTargetSizeCheck">
 
@@ -90,7 +90,7 @@
                         android:layout_marginEnd="8dp"
                         android:layout_weight="0.333"
                         android:clickable="true"
-                        app:cardBackgroundColor="#D9D9D9"
+                        app:cardBackgroundColor="#FFBE58"
                         app:cardCornerRadius="16dp"
                         tools:ignore="TouchTargetSizeCheck">
 
@@ -110,7 +110,7 @@
                         android:layout_marginEnd="48dp"
                         android:layout_weight="0.333"
                         android:clickable="true"
-                        app:cardBackgroundColor="#D9D9D9"
+                        app:cardBackgroundColor="#FFBE58"
                         app:cardCornerRadius="16dp"
                         tools:ignore="TouchTargetSizeCheck">
 
@@ -220,7 +220,7 @@
                                 android:id="@+id/textView11"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginEnd="110dp"
+                                android:layout_marginEnd="100dp"
                                 android:text="Anıtkabir"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
@@ -264,7 +264,7 @@
                                 android:layout_width="15dp"
                                 android:layout_height="15dp"
                                 android:layout_marginStart="30dp"
-                                android:src="@drawable/star"
+                                android:src="@drawable/ic_rate_star"
                                 app:layout_constraintBottom_toBottomOf="@+id/textView11"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toEndOf="@+id/textView11"
@@ -274,7 +274,7 @@
                                 android:id="@+id/textView14"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="5dp"
+                                android:layout_marginStart="2dp"
                                 android:text="4.9"
                                 android:textColor="@color/black"
                                 android:textSize="12sp"
@@ -282,11 +282,11 @@
                                 app:layout_constraintStart_toEndOf="@+id/imageView14"
                                 app:layout_constraintTop_toTopOf="@+id/imageView14" />
 
-                            <ImageView
+                            <CheckBox
                                 android:id="@+id/imageView15"
-                                android:layout_width="15dp"
-                                android:layout_height="15dp"
-                                android:src="@drawable/heart"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:button="@drawable/selector_wishlist_item"
                                 app:layout_constraintBottom_toBottomOf="@+id/textView13"
                                 app:layout_constraintStart_toEndOf="@+id/imageView14"
                                 app:layout_constraintTop_toTopOf="@+id/textView13" />
@@ -337,7 +337,7 @@
                                 android:id="@+id/textView7"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginEnd="70dp"
+                                android:layout_marginEnd="60dp"
                                 android:text="Galata Kulesi"
                                 android:textColor="@color/black"
                                 android:textSize="20dp"
@@ -380,7 +380,7 @@
                                 android:layout_width="15dp"
                                 android:layout_height="15dp"
                                 android:layout_marginEnd="10dp"
-                                android:src="@drawable/star"
+                                android:src="@drawable/ic_rate_star"
                                 app:layout_constraintBottom_toBottomOf="@+id/textView7"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toEndOf="@+id/textView7"
@@ -390,7 +390,7 @@
                                 android:id="@+id/textView10"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="5dp"
+                                android:layout_marginStart="2dp"
                                 android:text="4.8"
                                 android:textColor="@color/black"
                                 android:textSize="12sp"
@@ -398,11 +398,11 @@
                                 app:layout_constraintStart_toEndOf="@+id/imageView5"
                                 app:layout_constraintTop_toTopOf="@+id/imageView5" />
 
-                            <ImageView
+                            <CheckBox
                                 android:id="@+id/imageView6"
-                                android:layout_width="15dp"
-                                android:layout_height="15dp"
-                                android:src="@drawable/heart"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:button="@drawable/selector_wishlist_item"
                                 app:layout_constraintBottom_toBottomOf="@+id/textView9"
                                 app:layout_constraintStart_toEndOf="@+id/imageView5"
                                 app:layout_constraintTop_toTopOf="@+id/textView9" />
@@ -453,7 +453,7 @@
                                 android:id="@+id/textView20"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginEnd="100dp"
+                                android:layout_marginEnd="90dp"
                                 android:text="Kız Kulesi"
                                 android:textColor="@color/black"
                                 android:textSize="20dp"
@@ -496,7 +496,7 @@
                                 android:layout_width="15dp"
                                 android:layout_height="15dp"
                                 android:layout_marginStart="20dp"
-                                android:src="@drawable/star"
+                                android:src="@drawable/ic_rate_star"
                                 app:layout_constraintBottom_toBottomOf="@+id/textView20"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toEndOf="@+id/textView20"
@@ -506,7 +506,7 @@
                                 android:id="@+id/textView23"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="5dp"
+                                android:layout_marginStart="2dp"
                                 android:text="4.7"
                                 android:textColor="@color/black"
                                 android:textSize="12sp"
@@ -514,11 +514,11 @@
                                 app:layout_constraintStart_toEndOf="@+id/imageView22"
                                 app:layout_constraintTop_toTopOf="@+id/imageView22" />
 
-                            <ImageView
+                            <CheckBox
                                 android:id="@+id/imageView23"
-                                android:layout_width="15dp"
-                                android:layout_height="15dp"
-                                android:src="@drawable/heart"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:button="@drawable/selector_wishlist_item"
                                 app:layout_constraintBottom_toBottomOf="@+id/textView22"
                                 app:layout_constraintStart_toEndOf="@+id/imageView22"
                                 app:layout_constraintTop_toTopOf="@+id/textView22" />

@@ -43,7 +43,33 @@ class HomeFragment : Fragment() {
 
             Toast.makeText(requireContext(), toastMessage, Toast.LENGTH_SHORT).show()
         }
-        val favs2 = view.findViewById<CheckBox>(R.id.imageView23)
+        val favs2 = view.findViewById<CheckBox>(R.id.imageView26)
+        favs2.setOnClickListener {
+            isFavorite = !isFavorite
+
+            val toastMessage = if (isFavorite) {
+                "Added to your favorite places"
+            } else {
+                "Removed from favorite places"
+            }
+
+            Toast.makeText(requireContext(), toastMessage, Toast.LENGTH_SHORT).show()
+        }
+
+        val favs3 = view.findViewById<CheckBox>(R.id.imageView30)
+        favs2.setOnClickListener {
+            isFavorite = !isFavorite
+
+            val toastMessage = if (isFavorite) {
+                "Added to your favorite places"
+            } else {
+                "Removed from favorite places"
+            }
+
+            Toast.makeText(requireContext(), toastMessage, Toast.LENGTH_SHORT).show()
+        }
+
+        val favs4 = view.findViewById<CheckBox>(R.id.imageView23)
         favs2.setOnClickListener {
             isFavorite = !isFavorite
 

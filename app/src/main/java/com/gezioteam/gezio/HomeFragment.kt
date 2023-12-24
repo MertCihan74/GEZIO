@@ -12,6 +12,10 @@ import android.widget.Toast
 class HomeFragment : Fragment() {
 
     private var isFavorite = false
+    private var isFavorite1 = false
+    private var isFavorite2 = false
+    private var isFavorite3 = false
+    private var isFavorite4 = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,9 +37,9 @@ class HomeFragment : Fragment() {
         }
         val favs1 = view.findViewById<CheckBox>(R.id.imageView6)
         favs1.setOnClickListener {
-            isFavorite = !isFavorite
+            isFavorite1 = !isFavorite1
 
-            val toastMessage = if (isFavorite) {
+            val toastMessage = if (isFavorite1) {
                 "Added to your favorite places"
             } else {
                 "Removed from favorite places"
@@ -45,9 +49,9 @@ class HomeFragment : Fragment() {
         }
         val favs2 = view.findViewById<CheckBox>(R.id.imageView26)
         favs2.setOnClickListener {
-            isFavorite = !isFavorite
+            isFavorite2 = !isFavorite2
 
-            val toastMessage = if (isFavorite) {
+            val toastMessage = if (isFavorite2) {
                 "Added to your favorite places"
             } else {
                 "Removed from favorite places"
@@ -57,10 +61,10 @@ class HomeFragment : Fragment() {
         }
 
         val favs3 = view.findViewById<CheckBox>(R.id.imageView30)
-        favs2.setOnClickListener {
-            isFavorite = !isFavorite
+        favs3.setOnClickListener {
+            isFavorite3 = !isFavorite3
 
-            val toastMessage = if (isFavorite) {
+            val toastMessage = if (isFavorite3) {
                 "Added to your favorite places"
             } else {
                 "Removed from favorite places"
@@ -70,10 +74,10 @@ class HomeFragment : Fragment() {
         }
 
         val favs4 = view.findViewById<CheckBox>(R.id.imageView23)
-        favs2.setOnClickListener {
-            isFavorite = !isFavorite
+        favs4.setOnClickListener {
+            isFavorite4 = !isFavorite4
 
-            val toastMessage = if (isFavorite) {
+            val toastMessage = if (isFavorite4) {
                 "Added to your favorite places"
             } else {
                 "Removed from favorite places"
